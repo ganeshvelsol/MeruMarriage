@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "809237515529",
+    "firebase_url": "https://ganesh-68ec5.firebaseio.com",
+    "project_id": "ganesh-68ec5",
+    "storage_bucket": "ganesh-68ec5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809237515529:android:f813a93a214ba4a6",
+        "android_client_info": {
+          "package_name": "marriage.com.meru.merumarriage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809237515529-gds04d59cd7f2gu14copv3ms4mji3kgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYxwJf5TP2VV2S-4YE9Dr-pADJLb_kW8I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

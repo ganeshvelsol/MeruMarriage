@@ -1,10 +1,20 @@
-<ScrollView android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ScrollView
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@android:color/transparent"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:orientation="vertical"
@@ -24,6 +34,8 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:background="@android:color/transparent"
                 android:hint="surname" />
         </android.support.design.widget.TextInputLayout>
@@ -32,8 +44,11 @@
     <android.support.design.widget.TextInputLayout
         style="@style/test_input_layout">
         <EditText
+            android:id="@+id/full_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:hint="full name" />
     </android.support.design.widget.TextInputLayout>
     <LinearLayout
@@ -41,6 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
         android:layout_marginBottom="5dp"
         android:weightSum="1">
         <Spinner
@@ -48,6 +64,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
+            android:background="@drawable/spinner_shape"
             android:padding="2dp">
         </Spinner>
         <Spinner
@@ -55,6 +72,7 @@
             android:id="@+id/gender_marial_spinner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/spinner_shape"
             android:layout_weight="0.5">
         </Spinner>
     </LinearLayout>
@@ -63,53 +81,99 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:orientation="horizontal"
+        android:background="@android:color/transparent"
         android:weightSum="1">
         <ImageView
             android:id="@+id/date_select_imageview"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:background="@android:color/transparent"
             android:layout_gravity="center"
             android:layout_weight="0.3"
             android:src="@drawable/date_image"/>
         <EditText
+            android:id="@+id/date_set"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:hint="dd/m/yyy"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/shape"
             android:focusableInTouchMode="false"
             android:layout_weight="0.7"/>
     </LinearLayout>
-<LinearLayout
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="1">
+        <EditText
+            android:id="@+id/star"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="star"
+            android:background="@drawable/shape"
+            android:layout_weight="0.5"/>
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_height="match_parent"
+            android:hint="time of birth (A.M/P.M)"
+            android:background="@drawable/shape"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:layout_marginTop="5dp"
     android:weightSum="1">
         <EditText
+            android:id="@+id/height"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:hint="height in cm"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/shape"
             android:layout_weight="0.5"/>
         <EditText
+            android:id="@+id/color"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:hint="color"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/shape"
             android:layout_weight="0.5"/>
 </LinearLayout>
     <android.support.design.widget.TextInputLayout
         style="@style/test_input_layout">
-
         <EditText
+            android:id="@+id/mobile_num"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mobile number"
             android:maxLength="10"
             android:inputType="phone"/>
     </android.support.design.widget.TextInputLayout>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#9b979e"/>
+<android.support.v7.widget.CardView
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -122,10 +186,10 @@
             android:layout_height="wrap_content"
             android:textColor="#3a363e"
             android:textSize="18sp"/>
-
-        <android.support.design.widget.TextInputLayout style="@style/test_input_layout">
-
+        <android.support.design.widget.TextInputLayout
+            style="@style/test_input_layout">
             <EditText
+                android:id="@+id/qualificatn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Qualification"
@@ -135,13 +199,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="1"
+            android:background="@android:color/transparent"
             android:orientation="horizontal">
             <Spinner
+                android:id="@+id/occupation"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/spinner_shape"
                 android:layout_weight="0.5">
             </Spinner>
             <EditText
+                android:id="@+id/salary"
                 android:layout_width="0dp"
                 android:hint="salary P/M"
                 android:textColorHint="@color/colorPrimary"
@@ -151,8 +219,8 @@
         </LinearLayout>
         <android.support.design.widget.TextInputLayout
             style="@style/test_input_layout">
-
             <EditText
+                android:id="@+id/working_place"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="working place"
@@ -161,11 +229,277 @@
         <android.support.design.widget.TextInputLayout
             style="@style/test_input_layout">
             <EditText
+                android:id="@+id/cmp_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Company Name"
                 android:textColorHint="@color/text_color"/>
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
+</android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:text="Family Details :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#3a363e"
+            android:textSize="18sp" />
+        <android.support.design.widget.TextInputLayout
+            style="@style/test_input_layout">
+            <EditText
+                android:id="@+id/f_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="father name"
+                android:textColorHint="@color/text_color"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            style="@style/test_input_layout">
+            <EditText
+                android:id="@+id/f_desgn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="father designation"
+                android:textColorHint="@color/text_color"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            style="@style/test_input_layout">
+            <EditText
+                android:id="@+id/m_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mother Name"
+                android:textColorHint="@color/text_color"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            style="@style/test_input_layout">
+            <EditText
+                android:id="@+id/m_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mother Designation"
+                android:textColorHint="@color/text_color"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            style="@style/test_input_layout">
+            <EditText
+                android:id="@+id/family_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Family address"
+                android:textColorHint="@color/text_color"/>
+        </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+                <EditText
+                    android:id="@+id/no_brothers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint=" no.of brother"
+                    android:background="@drawable/shape"
+                    android:textColorHint="@color/text_color" />
+
+                <EditText
+                    android:id="@+id/no_brothers_marrg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/shape"
+                    android:hint="Marriages completed"
+                    android:textColorHint="@color/text_color" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+                <EditText
+                    android:id="@+id/no_sisters"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint=" no.of sisters"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/shape"
+                    android:textColorHint="@color/text_color"/>
+                <EditText
+                    android:id="@+id/no_sisters_marrg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/shape"
+                    android:hint="Marriages completed"
+                    android:textColorHint="@color/text_color"/>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/test_input_layout">
+            <EditText
+                android:id="@+id/family_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile number"
+                android:textColorHint="@color/text_color"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            style="@style/test_input_layout">
+            <EditText
+                android:id="@+id/abt_urself"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="About yourself"
+                android:lines="3"
+                android:textColorHint="@color/text_color"/>
+        </android.support.design.widget.TextInputLayout>
+        <Spinner
+            android:id="@+id/looking_for"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_shape">
+        </Spinner>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:layout_marginBottom="5dp"
+            android:weightSum="1">
+            <Spinner
+                android:id="@+id/looking_for_job"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/spinner_shape"
+                android:padding="2dp">
+            </Spinner>
+            <Spinner
+                android:padding="2dp"
+                android:id="@+id/looking_for_house"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_shape"
+                android:layout_weight="0.5">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <EditText
+                android:id="@+id/l_for_height"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint=" Height"
+                android:layout_weight="0.5"
+                android:background="@drawable/shape"
+                android:textColorHint="@color/text_color"/>
+            <EditText
+                android:id="@+id/l_for_salary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/shape"
+                android:hint="Salary (P.M)"
+                android:textColorHint="@color/text_color"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/l_for_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/shape"
+            android:hint="Clolor"
+            android:textColorHint="@color/text_color"/>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/test_input_layout">
+            <EditText
+                android:id="@+id/abt_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Write some desciption"
+              android:lines="3"
+                android:textColorHint="@color/text_color"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/select_image"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#122"
+            android:textSize="15sp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="Select Photo"/>
+        <ImageView
+            android:id="@+id/image_display"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/test_input_layout">
+
+        <EditText
+            android:id="@+id/mail_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Mail Id" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/save_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Save"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"/>
+
 </LinearLayout>
+    </RelativeLayout>
 </ScrollView>
+    <include
+        android:visibility="gone"
+        android:id="@+id/data_loading_screen_layout"
+        layout="@layout/data_loading"/>
+</RelativeLayout>
