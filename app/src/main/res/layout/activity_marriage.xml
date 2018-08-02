@@ -1,0 +1,79 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@+id/upload"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp">
+            <ImageView
+                android:id="@+id/image"
+                android:src="@drawable/upload"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="bottom"
+                android:background="#6f112233">
+
+            </LinearLayout>
+            <TextView
+                android:text="Upload Details"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_above="@+id/image"
+                android:textSize="20sp"
+                android:background="@color/text_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:cardElevation="5dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+                <RelativeLayout
+                    android:id="@+id/view_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="5dp">
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/vision" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="bottom"
+                        android:background="#6f112233">
+                        <TextView
+                            android:text="View Details"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:layout_above="@+id/image2"
+                            android:textSize="20sp"
+                            android:background="@color/text_color"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+

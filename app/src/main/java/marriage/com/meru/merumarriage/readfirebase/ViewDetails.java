@@ -18,14 +18,15 @@ public class ViewDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_details);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPagers);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new BrideFragment(), "Bride Details");
-        adapter.addFragment(new GromFragment(),"Groom Details");
+        adapter.addFragment(new BrideFragment(), "Bride Details ( Vaduvu )");
+        adapter.addFragment(new GromFragment(),"Groom Details ( varudu )");
         viewPager.setAdapter(adapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs_home_layout);
         tabLayout.setupWithViewPager(viewPager);

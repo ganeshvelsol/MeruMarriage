@@ -16,6 +16,17 @@
     android:orientation="vertical"
     android:background="@android:color/transparent"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.CardView
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -95,7 +106,8 @@
             android:id="@+id/date_set"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:hint="dd/m/yyy"
+            android:hint="dd/mm/yyy"
+            android:inputType="phone"
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@drawable/shape"
@@ -163,6 +175,8 @@
             android:maxLength="10"
             android:inputType="phone"/>
     </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -297,6 +311,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Family address"
+                android:lines="2"
                 android:textColorHint="@color/text_color"/>
         </android.support.design.widget.TextInputLayout>
         <LinearLayout
@@ -309,6 +324,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
+                    android:inputType="phone"
                     android:hint=" no.of brother"
                     android:background="@drawable/shape"
                     android:textColorHint="@color/text_color" />
@@ -318,6 +334,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
+                    android:inputType="phone"
                     android:layout_marginLeft="3dp"
                     android:layout_marginRight="3dp"
                     android:background="@drawable/shape"
@@ -335,6 +352,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:hint=" no.of sisters"
+                    android:inputType="phone"
                     android:layout_weight="0.5"
                     android:background="@drawable/shape"
                     android:textColorHint="@color/text_color"/>
@@ -343,6 +361,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
+                    android:inputType="phone"
                     android:layout_marginLeft="3dp"
                     android:layout_marginRight="3dp"
                     android:background="@drawable/shape"
@@ -357,6 +376,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Mobile number"
+                android:inputType="phone"
+                android:maxLength="10"
                 android:textColorHint="@color/text_color"/>
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -469,11 +490,11 @@
             android:text="Select Photo"/>
         <ImageView
             android:id="@+id/image_display"
+            android:src="@drawable/selectimage"
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:layout_weight="0.5"/>
     </LinearLayout>
-
     <android.support.design.widget.TextInputLayout
         style="@style/test_input_layout">
 
@@ -481,20 +502,21 @@
             android:id="@+id/mail_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Mail Id"
             android:inputType="textEmailAddress"
-            android:hint="Mail Id" />
+            android:textColor="@color/common_plus_signin_btn_text_light_disabled" />
     </android.support.design.widget.TextInputLayout>
-
     <Button
         android:id="@+id/save_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="#0426"
+        android:elevation="2dp"
         android:gravity="center"
         android:text="Save"
-        android:layout_margin="5dp"
-        android:textAllCaps="false"/>
-
+        android:textAllCaps="false" />
 </LinearLayout>
     </RelativeLayout>
 </ScrollView>
