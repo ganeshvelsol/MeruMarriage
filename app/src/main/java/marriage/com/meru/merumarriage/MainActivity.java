@@ -278,6 +278,7 @@ public class MainActivity extends AppCompatActivity
          lfs=l_for_salary.getText().toString().trim();
          lfc=l_for_color.getText().toString().trim();
          mail=mail_id.getText().toString().trim();
+
         if (Name.isEmpty())
         {
             name.setError("enter name");
@@ -382,7 +383,7 @@ public class MainActivity extends AppCompatActivity
             {
                 data_loading_screen_layout.setVisibility(View.VISIBLE);
                 //if everything is succes done the code below...
-                mAuth.createUserWithEmailAndPassword(mail,sGender)
+                mAuth.createUserWithEmailAndPassword(mail,Mobile)
                         .addOnCompleteListener(MainActivity.this,new OnCompleteListener<AuthResult>()
                         {
                             @Override

@@ -15,28 +15,35 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
-        <activity android:name=".readfirebase.ViewDetails">
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".readfirebase.ViewDetails" />
+
         <service android:name=".helpers.MyFbInstanceId">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <activity android:name=".Marriage">
+
+        <activity android:name=".Marriage"></activity>
+
+        <service android:name=".helpers.ForNotification">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".helpers.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service
-            android:name=".helpers.ForNotification">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-            </intent-filter>
-        </service>
+        <activity android:name=".helpers.Login"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:label="Login">
+
+        </activity>
     </application>
 
 </manifest>

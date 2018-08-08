@@ -33,18 +33,21 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp">
         <TextView
-            android:text="Basic Details"
+            android:text="Need Basic Details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="normal"
-            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:padding="10dp"
             android:textColor="#3a363e"/>
         <android.support.design.widget.TextInputLayout
            style="@style/test_input_layout">
             <EditText
                 android:id="@+id/name"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:background="@android:color/transparent"
@@ -490,7 +493,7 @@
             android:text="Select Photo"/>
         <ImageView
             android:id="@+id/image_display"
-            android:src="@drawable/selectimage"
+            android:src="@drawable/camera"
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:layout_weight="0.5"/>
