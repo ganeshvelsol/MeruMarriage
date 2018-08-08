@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ public class Login extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         email=findViewById(R.id.email);
@@ -63,6 +65,18 @@ public class Login extends AppCompatActivity
                 Snackbar op=Snackbar.make(findViewById(android.R.id.content),"no internet connection. Make it on",Snackbar.LENGTH_LONG);
                 op.show();
             }
+        }
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // app icon in action bar clicked; goto parent activity.
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 

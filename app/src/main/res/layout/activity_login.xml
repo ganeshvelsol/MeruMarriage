@@ -23,7 +23,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="15dp"
-            android:hint=" registered email"/>
+            android:hint=" Registered email"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -43,9 +43,11 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:text="login"
+        android:text="Login"
         android:textAllCaps="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape"
         android:onClick="forwarded"/>
 </LinearLayout>

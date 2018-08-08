@@ -43,6 +43,7 @@ public class SplashScreen extends AppCompatActivity
     public void register(View vs)
     {
         startActivity(new Intent(this,Marriage.class));
+        finish();
     }
     public void login(View ss)
     {
